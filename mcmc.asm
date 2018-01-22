@@ -1,14 +1,12 @@
 ;Maria Cecília Matos Corrêa
-;287703
-;Intel :)
 
     assume cs:codigo,ds:dados,es:dados,ss:pilha
 
 CR      EQU     0DH ; constante - codigo ASCII do caractere "carriage return"
 LF      EQU     0AH ; constante - codigo ASCII do caractere "line feed"
-TAB		EQU		9H ; constante - codigo ASCII do caractere "TAB"
+TAB	EQU		9H ; constante - codigo ASCII do caractere "TAB"
 BS      EQU     8H ; constante - codigo ASCII do caractere "backspace"
-ESCAPE	EQU		1BH ; constante - codigo ASCII do caractere "esc"
+ESCAPE	EQU	1BH ; constante - codigo ASCII do caractere "esc"
 
 dados	segment
 msgERROab	db		CR, LF, 'Erro de abertura de arquivo:', CR, LF, '$'
@@ -32,10 +30,10 @@ msgFim2		db		'                 -- Maria Cecilia Matos Correa -- ', CR, LF
 msgFim3		db		'                           -- 287703 --', CR, LF, LF, LF
 msgFim4		db		'                   Foi um prazer ser sua aluna!', '$'
 linha		db		0
-aux			db		0
+aux		db		0
 nometam		db		0
 ptaux		dw		0
-dez			dw		0
+dez		dw		0
 handler		dw		0
 lidos		dw		0
 eliminados	dw		0
@@ -43,7 +41,7 @@ strLidos	db		7h dup(0)
 strElim		db		7h dup(0)
 buffer		db		3E80H dup('$')
 clrline		db		80 dup(' ')
-cif			db		'$'
+cif		db		'$'
 cifras		db		0
 lineaux		db		0
 
